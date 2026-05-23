@@ -1,0 +1,52 @@
+name: Build indexes
+
+# Trigger filtered to source patches only — the commit this workflow
+# produces only touches `README.md` files, which aren't in the path
+# filter, so the resulting push doesn't re-trigger this workflow.
+# That keeps the "skip-CI on the auto-commit" promise without needing
+# `[skip ci]` tokens or a bot user.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'patches/**/*.ncsxpatch.yaml'
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/build-indexes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-indexes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # We push back to this branch; default GITHUB_TOKEN is fine
+          # because of `permissions: contents: write` above.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Regenerate indexes
+        run: npm run build-indexes
+
+      - name: Commit + push if changed
+        run: |
+          if git diff --quiet -- patches; then
+            echo "No index changes."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add patches
+          git commit -m 'chore(indexes): regenerate patch indexes'
+          git push

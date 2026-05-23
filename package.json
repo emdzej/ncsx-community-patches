@@ -1,0 +1,23 @@
+{
+  "name": "ncsx-community-patches",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Community-contributed coding patches for ncsx. Drop in a .ncsxpatch.yaml under patches/<chassis>/, open a PR — indexes regenerate automatically on merge.",
+  "type": "module",
+  "scripts": {
+    "build-indexes": "node scripts/build-indexes.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "yaml": "^2.6.0",
+    "zod": "^3.23.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emdzej/ncsx-community-patches.git"
+  },
+  "license": "CC-BY-SA-4.0"
+}

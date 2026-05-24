@@ -1,0 +1,17 @@
+schema: ncsx-patch/v1
+title: E46 IKE UK to EU
+description: |-
+  Changes settings in the cluster from UK to EU
+author: emdzej
+keywords: [ IKE ]
+chassis: E46
+modules:
+  - module: KMB
+    edits:
+      LL/RL: linkslenker
+      WEG_EINHEIT: km
+      ZEIT_EINHEIT: 24_stunden
+      WEG_DURCHSCHNITT: km/h
+      VERBRAUCH_D1: l/100km
+      WEG_REICHWEITE: km
+      WEG_LIMIT: km

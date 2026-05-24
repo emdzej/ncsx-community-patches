@@ -1,0 +1,11 @@
+schema: ncsx-patch/v1
+title: IKE automatic to manual swap
+description: |-
+  Changes setting when doing automatic to manual gearbox swap
+author: emdzej
+keywords: [ IKE, gearbox, manual, automatic ]
+chassis: E46
+modules:
+  - module: KMB
+    edits:
+      GETRIEBEART: handschaltung

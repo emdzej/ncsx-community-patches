@@ -2,6 +2,12 @@
 
 # E46 patches
 
-_No patches yet._
+2 patches.
 
-See the [contributing guide](../../README.md#contributing) to add one.
+## KMB
+
+| Patch | Description | Coding indexes | Author | Keywords |
+|---|---|---|---|---|
+| [E46 IKE UK to EU](e46-ike-uk-to-eu.ncsxpatch.yaml) | Changes settings in the cluster from UK to EU | _any_ | emdzej | `IKE` |
+| [IKE automatic to manual swap](ike-automatic-to-manual-swap.ncsxpatch.yaml) | Changes setting when doing automatic to manual gearbox swap | _any_ | emdzej | `IKE`, `gearbox`, `manual`, `automatic` |
+

@@ -2,7 +2,13 @@
 
 # E46 patches
 
-2 patches.
+3 patches.
+
+## GM5
+
+| Patch | Description | Coding indexes | Author | Keywords |
+|---|---|---|---|---|
+| [GM5 indicators on lock / unlock](gm5-indicators-on-lock-unlock.ncsxpatch.yaml) | Use indicators to confirm lock / unlock. Lock only if all doors are closed | _any_ | emdzej | `GM5` |
 
 ## KMB
 

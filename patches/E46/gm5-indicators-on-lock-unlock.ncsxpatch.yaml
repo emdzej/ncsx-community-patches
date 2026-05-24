@@ -1,0 +1,13 @@
+schema: ncsx-patch/v1
+title: GM5 indicators on lock / unlock
+description: |-
+  Use indicators to confirm lock / unlock. Lock only if all doors are closed
+author: emdzej
+keywords: [ GM5 ]
+chassis: E46
+modules:
+  - module: GM5
+    edits:
+      QUIT_OPT_SCHAERF: aktiv
+      QUIT_OPT_SCHAERF_KLAPPE: aktiv
+      QUIT_OPT_ENTSCH: aktiv

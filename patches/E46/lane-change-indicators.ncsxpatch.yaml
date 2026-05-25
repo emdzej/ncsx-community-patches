@@ -1,0 +1,12 @@
+schema: ncsx-patch/v1
+title: Lane change indicators
+description: |-
+  Enables lane change indicators - blink trice on indicator lever touch
+author: emdzej
+keywords: [ lights, LSZ ]
+chassis: E46
+modules:
+  - module: ALSZ
+    edits:
+      CYCL_TI_BLK: dreimal
+    coding_indexes: [ C37 ]

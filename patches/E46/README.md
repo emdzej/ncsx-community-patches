@@ -2,12 +2,13 @@
 
 # E46 patches
 
-5 patches.
+7 patches.
 
 ## ALSZ
 
 | Patch | Description | Coding indexes | Author | Keywords |
 |---|---|---|---|---|
+| [DRL](drl.ncsxpatch.yaml) | drl | _any_ | emdzej | `DRL`, `lights`, `LSZ`, `ALSZ` |
 | [Lane change indicators](lane-change-indicators.ncsxpatch.yaml) | Enables lane change indicators - blink trice on indicator lever touch | `C37` | emdzej | `lights`, `LSZ` |
 
 ## GM5
@@ -15,6 +16,7 @@
 | Patch | Description | Coding indexes | Author | Keywords |
 |---|---|---|---|---|
 | [GM5 indicators on lock / unlock](gm5-indicators-on-lock-unlock.ncsxpatch.yaml) | Use indicators to confirm lock / unlock. Lock only if all doors are closed | _any_ | emdzej | `GM5` |
+| [Unlock touring tailgate instead of glass with remote](unlock-touring-tailgate-instead-of-glass-with-remote.ncsxpatch.yaml) | Unlock touring tailgate instead of glass with remote | _any_ | emdzej | `GM5`, `touring`, `tailgate` |
 
 ## KMB
 

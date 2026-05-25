@@ -2,7 +2,7 @@
 
 # E46 patches
 
-3 patches.
+4 patches.
 
 ## GM5
 
@@ -16,4 +16,10 @@
 |---|---|---|---|---|
 | [E46 IKE UK to EU](e46-ike-uk-to-eu.ncsxpatch.yaml) | Changes settings in the cluster from UK to EU | _any_ | emdzej | `IKE` |
 | [IKE automatic to manual swap](ike-automatic-to-manual-swap.ncsxpatch.yaml) | Changes setting when doing automatic to manual gearbox swap | _any_ | emdzej | `IKE`, `gearbox`, `manual`, `automatic` |
+
+## LSZ
+
+| Patch | Description | Coding indexes | Author | Keywords |
+|---|---|---|---|---|
+| [DRL or pre-facelift LSZ (C26-C29)](pre-facelift-drl.ncsxpatch.yaml) | Enable DRL on pre-facelift LSZ (coding indexes 26-29). You MUST replace your  | `C26`, `C27`, `C28`, `C29` | emdzej | `LSZ`, `DRL` |
 

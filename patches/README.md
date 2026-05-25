@@ -2,9 +2,9 @@
 
 # Community patches
 
-Patches grouped by chassis. **1** chassis · **3** patches · **11** FSW/PSW edits total.
+Patches grouped by chassis. **1** chassis · **4** patches · **27** FSW/PSW edits total.
 
 | Chassis | Patches | Edits | Modules touched |
 |---|---|---|---|
-| [**E46**](E46/) | 3 | 11 | `GM5`, `KMB` |
+| [**E46**](E46/) | 4 | 27 | `GM5`, `KMB`, `LSZ` |
 

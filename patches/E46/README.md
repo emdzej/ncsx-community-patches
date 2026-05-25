@@ -2,7 +2,13 @@
 
 # E46 patches
 
-4 patches.
+5 patches.
+
+## ALSZ
+
+| Patch | Description | Coding indexes | Author | Keywords |
+|---|---|---|---|---|
+| [Lane change indicators](lane-change-indicators.ncsxpatch.yaml) | Enables lane change indicators - blink trice on indicator lever touch | `C37` | emdzej | `lights`, `LSZ` |
 
 ## GM5
 

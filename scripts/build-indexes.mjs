@@ -51,6 +51,12 @@ function escapeMd(text) {
   return text.replace(/\|/g, '\\|').replace(/\n+/g, ' ');
 }
 
+/**
+ * First non-empty line of a string — for table-cell summaries of
+ * multi-line YAML block scalars (`description: |`). Without this the
+ * whole description ends up flattened into a single cell, which on
+ * a real patch with paragraphs of context blows out the column width.
+ */
 function firstLine(text) {
   return text.split('\n').find((l) => l.trim().length > 0) ?? '';
 }
@@ -93,9 +99,15 @@ function renderChassisReadme(chassisDirName, patches) {
     lines.push('|---|---|---|---|---|');
     for (const { file, patch, modulePatch } of byModule.get(mod)) {
       const rel = relative(join(PATCHES_DIR, chassisDirName), file);
-      const desc = escapeMd(
-        modulePatch.description ?? firstLine(patch.description ?? '') ?? '',
-      );
+      // Apply firstLine() to BOTH per-module and top-level
+      // descriptions so multi-line YAML block scalars (`description: |`)
+      // collapse to a teaser in the table. Before this fix
+      // modulePatch.description fell through firstLine unchanged and
+      // the whole multi-line text ended up in one cell — the rest of
+      // the prose belongs in the YAML file for users to read, not in
+      // the index table.
+      const descSource = modulePatch.description ?? patch.description ?? '';
+      const desc = escapeMd(firstLine(descSource));
       const cis = modulePatch.coding_indexes?.length
         ? modulePatch.coding_indexes.map((c) => `\`${c}\``).join(', ')
         : '_any_';

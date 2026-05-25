@@ -1,0 +1,28 @@
+schema: ncsx-patch/v1
+title: DRL or pre-facelift LSZ (C26-C29)
+description: |-
+  Enable DRL on pre-facelift LSZ (coding indexes 26-29). You MUST replace your 
+  DATEN files with the supplied ones (LSZ.C26, LSZ.C27, LSZ.C28, LSZ.C29)
+author: emdzej
+keywords: [ LSZ, DRL ]
+chassis: E46
+modules:
+  - module: LSZ
+    coding_indexes: [C26, C27, C28, C29]
+    edits:
+      FERNLICHT_DRL: aktiv
+      EINZEIT_DRL: wert_02
+      TAGFAHRLICHT: aktiv
+      PROGRAMMPARAMETER_LSZ_1: us  
+      PROGRAMMPARAMETER_LSZ_2: us
+      PROGRAMMPARAMETER_LSZ_3: us
+      PROGRAMMPARAMETER_LSZ_4: us
+      PROGRAMMPARAMETER_LSZ_5: us
+      PROGRAMMPARAMETER_LSZ_6: us
+      PROGRAMMPARAMETER_LSZ_7: us
+      PROGRAMMPARAMETER_LSZ_8: us
+      PROGRAMMPARAMETER_LSZ_9: us
+      PROGRAMMPARAMETER_LSZ_10: us
+      PROGRAMMPARAMETER_LSZ_11: us
+      PROGRAMMPARAMETER_LSZ_12: us
+      PROGRAMMPARAMETER_LSZ_13: us

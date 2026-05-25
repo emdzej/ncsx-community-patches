@@ -1,0 +1,15 @@
+schema: ncsx-patch/v1
+title: Unlock touring tailgate instead of glass with remote
+description: |-
+  Unlock touring tailgate instead of glass with remote
+author: emdzej
+keywords: [ GM5, touring, tailgate ]
+chassis: E46
+modules:
+  - module: GM5
+    edits:
+      FUNKTIONEN_TOURING: aktiv
+      HECKSCHEIBE_ENTR_SENDER_1: aktiv
+      HECKSCHEIBE_ENTR_SENDER_2: aktiv
+      HECKSCHEIBE_ENTR_SENDER_3: aktiv
+      HECKSCHEIBE_ENTR_SENDER_4: aktiv

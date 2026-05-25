@@ -1,0 +1,14 @@
+schema: ncsx-patch/v1
+title: DRL
+description: |-
+  drl
+author: emdzej
+keywords: [ DRL, lights, LSZ, ALSZ ]
+chassis: E46
+modules:
+  - module: ALSZ
+    edits:
+      TAGFAHRLICHT_ECE: aktiv
+      DRL_BLK_VORNE_2_GEDIMMT: nicht_aktiv
+      GED_FL_ALS_DRL: aktiv
+      DRL_DIMMUNG: wert_02    
